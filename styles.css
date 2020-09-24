@@ -59,3 +59,17 @@ ul {
   overflow: hidden;
   background-color: powderblue;
 }
+.city {
+  background-color: tomato;
+  color: white;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+}
+.main {
+  text-align: center;
+}
+.note{
+  font-size : 120%;
+  color: red;
+}
