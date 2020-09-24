@@ -30,3 +30,25 @@ a:active {
   background-color: transparent;
   text-decoration: underline;
 }
+div {
+  background-image: url('example_img_girl.jpg');
+  background-repeat: no-repeat;
+}
+table, th, td {
+  border: 1px solid black;
+}
+th, td {
+  border-collapse: collapse;
+}
+th {
+  text-align: left;
+}
+td {
+  text-align: center;
+}
+table {
+  border-spacing: 5px;
+}
+#t01 {
+  background-color: tomato
+}
