@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+  </head>
+  <body>
+    <form class="id" action="index.html" method="post" action="/action_page.php" target="_blank" method="get" autocomplete="on">
+      <fieldset>
+      <legend>개인신상정보조사</legend>
+      <label for="id">아이디 :</label>
+      <input type="text" name="id" value="id" readonly disabled >
+      <br>
+      <label for="pwd">비밀번호 :</label>
+      <input type="text" name="pwd" value="pwd" size="50" maxlength="10">
+      <br>
+      <input type="submit" name="submit" value="submit">
+      <input type="reset">
+      </fieldset>
+
+      <hr>
+      <label for="cars">Choose a car: </label>
+      <select id="cars" name="cars" size="1" multiple>
+        <option value="volvo">Volvo</option>
+        <option value="audi" selected>Audi</option>
+        <option value="bmw">BMW</option>
+      </select>
+      <br>
+      <input type="submit" name="submit" value="submit">
+
+      <hr>
+      <textarea name="message" rows="8" cols="80"></textarea>
+      <br>
+      <input type="submit" name="submmit" value="submit">
+
+      <hr>
+      <button type="button" onClick="alert('Hello World')" name="button">Click Me</button>
+
+      <hr>
+      <input list="browser">
+      <datalist id="browser">
+      <option value="Internet Explorer"></option>
+      <option value="Firefox"></option>
+      <option value="Chrome"></option>
+      <option value="Opera"></option>
+      <option value="Safari"></option>
+      </datalist>
+    </form>
+
+    <form action="/action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+      0
+      <input type="range"  id="a" name="a" value="50">
+      100 +
+      <input type="number" id="b" name="b" value="50">
+      =
+      <output name="x" for="a b"></output>
+      <br>
+      <input type="submit">
+    </form>
+
+    <hr>
+    <form class="id2" action="index.html" method="post">
+      <fieldset>
+        <legend></legend>
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male" >Male</label><br>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label><br>
+          <input type="radio" id="other" name="gender" value="other">
+          <label for="other">Other</label>
+
+          <br>
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+          <label for="vehicle1"> I have a bike</label><br>
+          <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+          <label for="vehicle2"> I have a car</label><br>
+          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+          <label for="vehicle3"> I have a boat</label>
+
+          <hr>
+          <label for="datemax">Enter a date before 1980-01-01:</label>
+          <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+          <label for="datemin">Enter a date after 2000-01-01:</label>
+          <input type="date" id="datemin" name="datemin" min="2000-01-02">
+
+          <hr>
+          <label for="birthdaytime">Birthday (date and time):</label>
+          <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+
+          <hr>
+          <label for="email">Email Address: </label>
+          <input type="email" name="email" value="email">
+
+          <hr>
+          <label for="myfile">Select a file: </label>
+          <input type="file" name="myfile" value="myfile" multiple>
+
+          <hr>
+          <label for="quantity">Quantity (between 1 and 5):</label>
+          <input type="number" id="quantity" name="quantity" min="0" max="100" step="10" value="50">
+
+          <hr>
+          <label for="vol">Volume (between 0 and 50):</label>
+          <input type="range" id="vol" name="vol" min="0" max="50">
+
+          <hr>
+          <label for="gsearch">Search Google:</label>
+          <input type="search" id="gsearch" name="gsearch">
+
+          <hr>
+          <label for="homepage">Add your homepage:</label>
+          <input type="url" id="homepage" name="homepage" autofocus>
+
+          <hr>
+          <label for="country_code">Country code:</label>
+          <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+
+          <hr>
+          <label for="fname">First name:</label>
+          <input type="text" id="fname" name="fname"><br><br>
+          <label for="lname">Last name:</label>
+          <input type="text" id="lname" name="lname"><br><br>
+          <input type="image" src="1.jpg" alt="Submit" width="48" height="48">
+
+          <hr>
+          <label for="fname">First name:</label>
+          <input type="text" id="fname" name="fname"><br><br>
+          <label for="lname">Last name:</label>
+          <input type="text" id="lname" name="lname"><br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" autocomplete="off"><br><br>
+          <input type="submit" value="Submit">
+      </fieldset>
+    </form>
+
+
+
+  </body>
+</html>
