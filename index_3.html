@@ -2,10 +2,61 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <!-- 반응형 웹사이트 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2017250032 이병주 3번째 페이지</title>
+    <meta http-equiv="refresh" content="30">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
   </head>
   <body>
-    
+    <!-- 0925 -->
+    <iframe src="https://github.com/Gomddu" style="border:none;" title="Iframe Example"></iframe>
+
+    <p id="demo">1234</p>
+    <script>
+      document.getElementById("demo").innerHTML = "Hello JavaScript!";
+      document.getElementById("demo").style.fontSize="30px";
+      document.getElementById("demo").style.color="red";
+      document.getElementById("demo").style.backgroundColor="powderblue";
+
+      function light(sw) {
+        var pic;
+        if (sw==1) {
+          document.getElementById("demo").innerHTML = "Light On";
+        } else {
+          document.getElementById("demo").innerHTML = "Light Off";
+        }
+      }
+    </script>
+    <noscript>Sorry, your browser doesnot support JavaScript!</noscript>
+
+    <button type="button" onClick="light(1)">Light On</button>
+    <button type="button" onClick="light(2)">Light Off</button>
+
+    <h1 style="font-size:10vw">Hello World</h1>
+
+    <img src ="1.jpg" style="width:100%;">
+
+    <div class="container">
+      <div class="jumbotron">
+        <h1>My First Bootstrap Page</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          ...1
+        </div>
+        <div class="col-sm-4">
+          ...2
+        </div>
+        <div class="col-sm-4">
+        ...3
+        </div>
+      </div>
+    </div>
 
   </body>
 </html>
