@@ -5,6 +5,20 @@
     <title="Im a tooltip">This is a param</title>
     <link rel="stylesheet" href="styles.css"
     <hr>
+    <script>
+    function clickCounter() {
+      if (typeof(Storage) !== "undefined") {
+        if (sessionStorage.clickcount) {
+          sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+        } else {
+          sessionStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+      } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+      }
+    }
+    </script>
   </head>
   <body>
     <!-- 0924 -->
@@ -26,6 +40,7 @@
     <a href ="#C4">Jump to Chapter</a>
     <a href="index_2.html">Jump to index_2</a>
     <a href="index_3.html">Jump to index_3</a>
+    <a href="index_4.html">Jump to index_4</a>
     <p style = "color:red;">This is a red param </p>
     <h1>London</h1>
     <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
@@ -138,8 +153,57 @@
     <embed src="audi.jpeg">
 
     <iframe src="https://youtu.be/OA9eLhgHxSk?autoplay=1&mute=1" width="800" height="600"></iframe>
-    <iframe src="https://youtu.be/OA9eLhgHxSk?playlist=OA9eLhgHxSk&loop=1" width="800" height="600"></iframe>
-    <iframe src="https://youtu.be/OA9eLhgHxSk?controls=0" width="800" height="600"></iframe>
+    <!-- <iframe src="https://youtu.be/OA9eLhgHxSk?playlist=OA9eLhgHxSk&loop=1" width="800" height="600"></iframe>
+    <iframe src="https://youtu.be/OA9eLhgHxSk?controls=0" width="800" height="600"></iframe> -->
+
+    <br>
+    <button onclick="getLocation()" >Try it!</button>
+    <p id="demo"></p>
+    <script>
+    var x = document.getElementById("demo");
+
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude +
+      "<br>Longitude: " + position.coords.longitude;
+
+      var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+      var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&sensor=false&key=YOUR_KEY"
+
+      document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+    }
+
+    function showError(error) {
+      switch(error.code) {
+        case error.PERMISSION_DENIED:
+          x.innerHTML = "User denied the request for Geolocation."
+          break;
+        case error.POSITION_UNAVAILABLE:
+          x.innerHTML = "Location information is unavailable."
+          break;
+        case error.TIMEOUT:
+          x.innerHTML = "The request to get user location timed out."
+          break;
+        case error.UNKNOWN_ERROR:
+          x.innerHTML = "An unknown error occurred."
+          break;
+      }
+    }
+    </script>
+
+    <img draggable="true">
+    <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+    <div id="result"></div>
+    <p>Click the button to see the counter increase.</p>
+    <p>Close the browser tab (or window), and try again, and the counter is reset.</p>
 
   </body>
 </html>
