@@ -144,8 +144,74 @@
         <h4 class="card-title">어두운 카드</h4>
         <p class="card-text">어두운 카드 내용입니다.</p>
       </div>
-
     </div>
+
+    <!-- listGroup -->
+    <div class="container my-4">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action active">
+          파스타 맛집
+          <!-- span은 아이콘을 넣을 때 사용하는 태그 -->
+          <span class="badge badge-primary badge-pill">14</span>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          대게 맛집
+          <span class="badge badge-primary badge-pill">2</span>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          라멘 맛집
+          <span class="badge badge-primary badge-pill">1</span>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          김치찌개 맛집
+          <span class="badge badge-primary badge-pill">5</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- 4+8 = 12 무조건 12로 맞추어야함 -->
+      <div class="col-4">
+        <div class="list-group">
+          <a class="list-group-item list-group-item-action active"
+            data-toggle="list" href="#list-java">
+              Java
+          </a>
+          <a class="list-group-item list-group-item-action"
+            data-toggle="list" href="#list-cpp">
+              C++
+          </a>
+          <a class="list-group-item list-group-item-action"
+            data-toggle="list" href="#list-python">
+              Python
+          </a>
+          <a class="list-group-item list-group-item-action"
+            data-toggle="list" href="#list-html">
+              HTML
+          </a>
+        </div>
+      </div>
+
+      <div class="col-8">
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="list-java">
+            Java Programming
+          </div>
+          <div class="tab-pane fade" id="list-cpp">
+            C++ Programming
+          </div>
+          <div class="tab-pane fade" id="list-python">
+            Python Programming
+          </div>
+          <div class="tab-pane fade" id="list-html">
+            HTML Programming
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
